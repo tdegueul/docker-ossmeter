@@ -65,7 +65,7 @@ services:
  # Deployment of multiple instances may harm the system performance.
             
     oss-db: # data storage service
-        image: mongo:3.4 #current setup uses mongodb
+        build: ./oss-db
         networks:
             - default
         expose:  #exposes database port to oss-web and oss-app
