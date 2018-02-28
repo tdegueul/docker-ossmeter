@@ -27,5 +27,5 @@ mongorestore --drop --db pongo /home/dump/pongo
 mongorestore --drop --db users /home/dump/users
 
 # Keep container running
-#tail -f /dev/null
+tail -f /dev/null
 
