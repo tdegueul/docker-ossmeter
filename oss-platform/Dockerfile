@@ -21,7 +21,7 @@ LABEL description="Image with the OSSMETER platform"
 
 # Get the binaries and uncompress them inthe container
 #RUN wget http://ci3.castalia.camp/dl/ossmeter.tar.gz -O /ossmeter.tar.gz \
-COPY scaava.tar.gz /ossmeter.tar.gz
+COPY scava.tar.gz /ossmeter.tar.gz
 RUN tar xzf /ossmeter.tar.gz -C / \
 	&& rm /ossmeter.tar.gz
 WORKDIR /ossmeter/

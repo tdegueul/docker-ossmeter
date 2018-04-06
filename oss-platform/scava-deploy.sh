@@ -7,9 +7,9 @@ PRODUCT="$SCAVA/metric-platform/releng/org.eclipse.scava.product/target/products
 MAVEN_OPTS=-Xmx20148m mvn -f "$SCAVA/metric-platform/pom.xml" package
 
 # Package product
-cp -r "$PRODUCT/configuration" "$PRODUCT/eclipse" "$PRODUCT/eclipse.ini" "$PRODUCT/features" "$PRODUCT/plugins" .
-tar czf scava.tar.gz configuration eclipse eclipse.ini features plugins prop.properties
+cp -r "$PRODUCT/configuration" "$PRODUCT/eclipse" "$PRODUCT/eclipse.ini" "$PRODUCT/features" "$PRODUCT/plugins" ossmeter
+tar czf scava.tar.gz ossmeter
 
 # Cleanup
-rm -rf configuration eclipse eclipse.ini features plugins
+rm -rf ossmeter/configuration ossmeter/eclipse ossmeter/eclipse.ini ossmeter/features ossmeter/plugins
 
