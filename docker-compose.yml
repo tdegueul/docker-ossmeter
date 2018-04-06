@@ -39,8 +39,8 @@ services:
    
     oss-app: # Deploys a container with the OSSMETER platform configured to act as master
              # and to run the api server used by oss-web service
-        image: crossminer/ossmeter-platform
-#        build: ./oss-platform
+ #        image: crossminer/ossmeter-platform
+        build: ./oss-platform
         entrypoint: ./eclipse -apiServer -master -ossmeterConfig prop.properties
         depends_on:
             - oss-db
@@ -51,8 +51,8 @@ services:
             - 8183 # Admin API?
             
     oss-slave: # Service containing OSSMETER slaves instances.
-        image: crossminer/ossmeter-platform
-#        build: ./oss-platform
+#        image: crossminer/ossmeter-platform
+        build: ./oss-platform
         entrypoint: ./eclipse -slave -ossmeterConfig prop.properties
         depends_on:
             - oss-db
